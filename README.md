@@ -10,7 +10,7 @@ values with the ability to load themself from and write to files.
 ## Installation ##
 
 ```
-npm install --save git+https://github.com/christian-raedel/node-cconf.git#v0.2.0
+npm install --save git+https://github.com/christian-raedel/node-cconf.git#v0.3.0
 ```
 
 ### Testing ###
@@ -28,7 +28,7 @@ make install docs
 $BROWSER doc/index.html
 ```
 or [browse
-online](http://christian-raedel.github.io/node-cconf/doc/index.html)
+online](http://christian-raedel.github.io/node-cconf/index.html)
 
 ## Basic Usage ##
 
