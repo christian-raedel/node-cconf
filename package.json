@@ -1,0 +1,34 @@
+{
+  "name": "node-cconf",
+  "version": "0.3.2",
+  "description": "A node.js configuration framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christian-raedel/node-cconf.git"
+  },
+  "keywords": [
+    "config",
+    "yaml",
+    "json"
+  ],
+  "author": "Christian Rädel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christian-raedel/node-cconf/issues"
+  },
+  "homepage": "https://github.com/christian-raedel/node-cconf",
+  "dependencies": {
+    "js-yaml": "^3.1.0",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "chai-spies": "^0.5.1",
+    "jsdoc": "^3.3.0-alpha9",
+    "mocha": "^1.21.3"
+  }
+}
