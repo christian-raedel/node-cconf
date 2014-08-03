@@ -2,10 +2,10 @@
 
 # CConf #
 
-A [node.js](http://nodejs.org) module with the ability to hold the
-configuration of your node application. The configuration consists of
-required and optional key/value-pairs and their appropriate default
-values with the ability to load themself from and write to files.
+A [node.js](http://nodejs.org) module which holds the configuration 
+of your node application. The configuration consists of *required 
+and optional key/value-pairs* and their appropriate *default values* 
+with the ability to *load* themselves *from and write to files*.
 
 ## Installation ##
 
@@ -27,8 +27,7 @@ cd /path/to/node-cconf
 make install docs
 $BROWSER doc/index.html
 ```
-or [browse
-online](http://christian-raedel.github.io/node-cconf/index.html)
+or [browse API docs online](http://christian-raedel.github.io/node-cconf/index.html)
 
 ## Basic Usage ##
 
