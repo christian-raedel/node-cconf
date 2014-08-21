@@ -10,7 +10,7 @@ test:
 	@echo "************************"
 	@echo "* TEST LIBRARY         *"
 	@echo "************************"
-	@./node_modules/.bin/mocha --recursive test/*.spec.js
+	@KEYB_PARAMC=valueA,valueB,valueC ./node_modules/.bin/mocha --recursive test/*.spec.js
 
 docs:
 	@echo "************************"

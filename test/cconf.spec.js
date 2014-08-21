@@ -183,7 +183,7 @@ describe('CConf: load', function() {
     });
 
     it('should parse the environment', function() {
-        var conf = new CConf().addRequired('keyB:paramC').parseEnv({'KEYB_PARAMC': 'valueA,valueB,valueC'});
+        var conf = new CConf().addRequired('keyB:paramC').parseEnv();
         expect(conf.getValue('keyB:paramC')).to.be.deep.equal(['valueA', 'valueB', 'valueC']);
     });
 });
