@@ -181,6 +181,11 @@ describe('CConf: load', function() {
             expect(err.message).to.match(/keyB:paramC/);
         }
     });
+
+    it('should parse the environment', function() {
+        var conf = new CConf().addRequired('keyB:paramC').parseEnv({'KEYB_PARAMC': 'valueA,valueB,valueC'});
+        expect(conf.getValue('keyB:paramC')).to.be.deep.equal(['valueA', 'valueB', 'valueC']);
+    });
 });
 
 describe('CConf: save', function() {
