@@ -10,7 +10,7 @@ with the ability to *load* themselves *from and write to files*.
 ## Installation ##
 
 ```
-npm install --save git+https://github.com/christian-raedel/node-cconf.git#v0.3.0
+npm install --save git+https://github.com/christian-raedel/node-cconf.git#v0.3.3
 ```
 
 ### Testing ###
