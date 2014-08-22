@@ -1,6 +1,6 @@
 var _ = require('lodash')
     , expect = require('chai').expect
-    , util = require('../lib/util');
+    , util = require('../index').util;
 
 describe('util.deep', function() {
     it('get and set should be defined', function() {
