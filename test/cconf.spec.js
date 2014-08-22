@@ -5,7 +5,7 @@ var _ = require('lodash')
     , fs = require('fs')
     , path = require('path')
     , yaml = require('js-yaml')
-    , CConf = require('../index').CConf;
+    , CConf = require('../index');
 
 chai.use(spies);
 
