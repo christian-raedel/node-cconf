@@ -83,6 +83,11 @@ describe('CConf', function() {
         var conf = new CConf().setDefault('keyB:subkeyC', 27).setDefault('keyB:subkeyD', 43);
         expect(conf.getValue('keyB')).to.be.deep.equal({subkeyC: 27, subkeyD: 43});
     });
+
+    it('should get values from a list of keys', function () {
+        var conf = new CConf().setDefault('keyB:subkeyC', 27).setDefault('keyB:subkeyD', 43).setDefault('keyA', 9);
+        expect(conf.getObject(['keyA', 'keyB'])).to.be.deep.equal({keyA: 9, keyB: {subkeyC: 27, subkeyD: 43}});
+    });
 });
 
 describe('CConf: events', function() {
