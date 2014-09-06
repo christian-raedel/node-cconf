@@ -191,6 +191,11 @@ describe('CConf: load', function() {
         var conf = new CConf().addRequired('keyB:paramC').parseEnv();
         expect(conf.getValue('keyB:paramC')).to.be.deep.equal(['valueA', 'valueB', 'valueC']);
     });
+
+    it('should load from object with empty object values', function () {
+        var conf = new CConf('inge', ['supported-roles']).load({'supported-roles': {publisher: {}}});
+        expect(conf.getValue('supported-roles')).to.be.deep.equal({publisher: {}});
+    });
 });
 
 describe('CConf: save', function() {
