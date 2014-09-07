@@ -28,7 +28,9 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "chai-spies": "^0.5.1",
+    "eyes": "^0.1.8",
     "jsdoc": "^3.3.0-alpha9",
+    "memwatch": "^0.2.2",
     "mocha": "^1.21.3"
   }
 }
