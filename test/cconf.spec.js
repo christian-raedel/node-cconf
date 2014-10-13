@@ -151,9 +151,14 @@ describe('CConf: load', function() {
         expect(new CConf().load({keyB: {paramC: 43}}).getValue('keyB:paramC')).to.be.equal(43);
     });
 
-    it('should load from ARGV array', function() {
+    it('should load a number and a switch from ARGV array', function() {
         var argv = ['node', '--keyB:paramC=43', '-keyB:paramD'];
         expect(new CConf().load(argv).getValue('keyB')).to.be.deep.equal({paramC: 43, paramD: true});
+    });
+
+    it('should load a value from ARGV array', function () {
+        var argv = ['node', '--keyB:paramC=config.yml'];
+        expect(new CConf().load(argv).getValue('keyB')).to.be.deep.equal({paramC: 'config.yml'});
     });
 
     it('should load from JSON file', function() {
