@@ -222,6 +222,19 @@ describe('CConf: save', function() {
         fs.unlinkSync(filename);
     });
 
+    it('should save to same file where loaded from', function () {
+        var filename = __dirname + '/testFile.yml';
+        var conf = new CConf().setValue('keyB:paramC', 27);
+        expect(conf.save(filename)).to.be.true;
+        conf.load(filename);
+        fs.unlinkSync(filename);
+        expect(fs.existsSync(filename)).to.be.false;
+        expect(conf.getValue('keyB:paramC')).to.be.equal(27);
+        expect(conf.save()).to.be.true;
+        expect(fs.existsSync(filename)).to.be.true;
+        fs.unlinkSync(filename);
+    });
+
     it('should save to a custom function', function() {
         function save(obj) {
             expect(obj).to.be.deep.equal({keyB: {paramC: 27}});
